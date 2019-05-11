@@ -37,6 +37,7 @@ class Driver
         Passenger.all.select do |passenger|
             passenger.total_distance > num
         end
+        # returns passenger objects in an array
     end
 
     # def self.mileage_cap(num)
