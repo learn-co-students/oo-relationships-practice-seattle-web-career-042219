@@ -58,3 +58,10 @@ ride_4 = Ride.new(passenger_1, driver_2, 120)
 ride_5 = Ride.new(passenger_2, driver_2, 30)
 ride_6 = Ride.new(passenger_3, driver_3, 10)
 
+# IMDb
+
+
+# Crowdfunding
+
+
+# Gym
