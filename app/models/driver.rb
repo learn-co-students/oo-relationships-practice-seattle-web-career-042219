@@ -17,7 +17,7 @@ class Driver
         Ride.all.select do |ride|
             ride.driver == self
         end
-        # returns all of a drivers ride objects
+        # returns all of a driver's ride objects
     end
 
     def passengers
@@ -34,10 +34,17 @@ class Driver
     end
 
     def self.mileage_cap(num)
-        Passenger.all.select do |passenger|
-            passenger.total_distance > num
+        Driver.all.select do |driver|
+            driver.total_distance > num
         end
         # returns passenger objects in an array
+    end
+
+    def total_distance
+        find_rides_helper.map do |ride|
+            ride.distance
+        end.sum
+        # returns an array of a passenger's rides, then sums it
     end
 
     # def self.mileage_cap(num)

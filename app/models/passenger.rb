@@ -17,19 +17,19 @@ class Passenger
         Ride.all.select do |ride|
             ride.passenger == self
         end
-        # returns all of a passengers ride objects
+        # returns all of a passenger's ride objects
     end
 
     def drivers
         find_rides_helper.map do |ride|
             ride.driver
        end
-        # returns all of a passengers drivers
+        # returns all of a passenger's drivers
     end
 
     def rides
         find_rides_helper
-        # returns all of a passengers rides
+        # returns all of a passenger's rides
     end
 
     def total_distance
@@ -44,28 +44,5 @@ class Passenger
             passenger.total_distance > 100
         end
     end
-
-    # def self.premium_members
-    #     premium_ar=[]
-    #     @@all.map do |passenger|
-    #         new_hash={}
-    #         passenger.rides.each do |ride|
-    #             if new_hash["#{ride.passenger.name}"]
-    #                 new_hash["#{ride.passenger.name}"]+=ride.distance.to_f
-    #             else
-    #                 new_hash["#{ride.passenger.name}"]=ride.distance.to_f
-    #             end
-    #         end
-    #         premium_ar << new_hash
-    #     end
-    #     x=premium_ar.select do |passenger|
-    #         passenger.values.first > 100
-    #     end
-    #     x.map do |item|
-    #         item.keys
-    #     end.flatten
-    # end
-
-  
 
 end
