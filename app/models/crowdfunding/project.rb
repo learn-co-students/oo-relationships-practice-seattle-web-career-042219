@@ -25,9 +25,20 @@ class Project
 	end
 	
 	def self.above_goal
+		pledge_result_hash = {}
+		Pledge.all.map do |pledge|
+			if result_hash[pledge.project.name]
+				result_hash[pledge.project.name] += pledge.amount
+			else
+				result_hash[pledge.project.name] = pledge.amount
+			end
 		project_total_hash = {}
 		self.all.map do |project|
-			{project.name, project.goal_amount}
+			if project_total_hash.project.name]
+				project_total_hash[project.name] += pledge.amount
+			else
+				project_total_hash[project.name] = pledge.amount
+			end
 		end
 	end
 
