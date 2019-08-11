@@ -26,7 +26,7 @@ class Project
 	
 	def self.above_goal
 		pledge_result_hash = {}
-		Pledge.all.map do |pledge|
+		Pledge.all.each do |pledge|
 			if pledge_result_hash[pledge.project.name]
 				pledge_result_hash[pledge.project.name] += pledge.amount
 			else
@@ -34,17 +34,16 @@ class Project
 			end
 		end
 		project_goal_hash = {}
-		self.all.map do |project|
+		self.all.each do |project|
 			project_goal_hash[project.name] = project.goal_amount
 		end
 		result =[]
 		project_goal_hash.each do |key, value|
 			if pledge_result_hash[key] && project_goal_hash[key] <= pledge_result_hash[key]
 				result << key
-				puts result
 			end
 		end
-		result.uniq
+		result.uniq.join(", ")
 	end
 
 	def self.most_backers
