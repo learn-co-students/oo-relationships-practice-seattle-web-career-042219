@@ -27,23 +27,36 @@ class Project
 	def self.above_goal
 		pledge_result_hash = {}
 		Pledge.all.map do |pledge|
-			if result_hash[pledge.project.name]
-				result_hash[pledge.project.name] += pledge.amount
+			if pledge_result_hash[pledge.project.name]
+				pledge_result_hash[pledge.project.name] += pledge.amount
 			else
-				result_hash[pledge.project.name] = pledge.amount
-			end
-		project_total_hash = {}
-		self.all.map do |project|
-			if project_total_hash.project.name]
-				project_total_hash[project.name] += pledge.amount
-			else
-				project_total_hash[project.name] = pledge.amount
+				pledge_result_hash[pledge.project.name] = pledge.amount
 			end
 		end
+		project_goal_hash = {}
+		self.all.map do |project|
+			project_goal_hash[project.name] = project.goal_amount
+		end
+		result =[]
+		project_goal_hash.each do |key, value|
+			if pledge_result_hash[key] && project_goal_hash[key] <= pledge_result_hash[key]
+				result << key
+				puts result
+			end
+		end
+		result.uniq
 	end
 
 	def self.most_backers
-
+		pledge_number_of_backers_hash = {}
+		Pledge.all.map do |pledge|
+			if pledge_number_of_backers_hash[pledge.project.name]
+				pledge_number_of_backers_hash[pledge.project.name] += 1
+			else
+				pledge_number_of_backers_hash[pledge.project.name] = 1
+			end
+		end
+		pledge_number_of_backers_hash.key(pledge_number_of_backers_hash.values.max)
 	end
 
 end

@@ -16,11 +16,11 @@ returns all users who have pledged to multiple projects
 returns all users who have created a project
 
 ### Project
-[].no_pledges
+[x].no_pledges
 returns all projects which have no pledges yet
-[].above_goal
+[x].above_goal
 returns all projects which have met or exceeded their pledge goal
-[].most_backers
+[x].most_backers
 returns the project with the highest number of backers
 
 ### Pledge
