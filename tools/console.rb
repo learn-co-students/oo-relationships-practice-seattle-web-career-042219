@@ -7,23 +7,23 @@ end
 
 # Air BnB
 
-g1= Guest.new("Adam")
-g2= Guest.new("Bob")
-g3= Guest.new("Carl")
-g4= Guest.new("Dave")
-g5= Guest.new("Eric")
+guest_1 = Guest.new("Adam")
+guest_2 = Guest.new("Bob")
+guest_3 = Guest.new("Carl")
+guest_4 = Guest.new("Dave")
+guest_5 = Guest.new("Eric")
 
-l1=Listing.new("1st st.", "Atlanta")
-l2=Listing.new("2nd st.", "Baltimore")
-l3=Listing.new("3rd st.", "Chicago")
-l4=Listing.new("4th st.", "Denver")
-l5=Listing.new("5th st.", "Erie")
+listing_1 = Listing.new("1st st.", "Atlanta")
+listing_2 = Listing.new("2nd st.", "Baltimore")
+listing_3 = Listing.new("3rd st.", "Chicago")
+listing_4 = Listing.new("4th st.", "Denver")
+listing_5 = Listing.new("5th st.", "Erie")
 
-t1=Trip.new(g1, l1)
-t2=Trip.new(g2, l2)
-t3=Trip.new(g3, l3)
-t4=Trip.new(g4, l4)
-t5=Trip.new(g5, l5)
+trip_1 = Trip.new(guest_1, listing_1)
+trip_2 = Trip.new(guest_2, listing_2)
+trip_3 = Trip.new(guest_3, listing_3)
+trip_4 = Trip.new(guest_4, listing_4)
+trip_5 = Trip.new(guest_5, listing_5)
 
 # Bakery
 
@@ -84,6 +84,30 @@ pl4 = Pledge.new(u2, pr2, 20)
 
 # Gym
 
+location_1 = Location.new("Seattle")
+location_2 = Location.new("Spokane")
+location_3 = Location.new("Portland")
+
+client_1 = Client.new("Ada", [])
+client_2 = Client.new("Bob", [])
+client_3 = Client.new("Claire", [])
+
+trainer_1 = Trainer.new("Xavier", location_1, [client_1])
+trainer_2 = Trainer.new("Yvette", location_2, [client_2])
+trainer_3 = Trainer.new("Zack", location_3, [client_3, client_2])
+
+
+# location_1 = Location.new("Seattle", [trainer_1])
+# location_2 = Location.new("Spokane", [trainer_2, trainer_3])
+# location_3 = Location.new("Portland", [trainer_3])
+
+# client_1 = Client.new("Ada", trainer_1)
+# client_2 = Client.new("Bob", trainer_2)
+# client_3 = Client.new("Claire", trainer_3)
+
+# trainer_1 = Trainer.new("Xavier", location_1, client_1)
+# trainer_2 = Trainer.new("Yvette", location_2, client_2)
+# trainer_3 = Trainer.new("Zack", [location_2, location_3], client_3)
 
 Pry.start
 puts "Session done."
