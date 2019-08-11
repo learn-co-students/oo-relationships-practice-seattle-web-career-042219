@@ -86,4 +86,4 @@ pl4 = Pledge.new(u2, pr2, 20)
 
 
 Pry.start
-puts "Done"
+puts "Session done."
