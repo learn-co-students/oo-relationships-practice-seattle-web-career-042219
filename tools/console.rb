@@ -96,18 +96,5 @@ trainer_1 = Trainer.new("Xavier", location_1, [client_1])
 trainer_2 = Trainer.new("Yvette", location_2, [client_2])
 trainer_3 = Trainer.new("Zack", location_3, [client_3, client_2])
 
-
-# location_1 = Location.new("Seattle", [trainer_1])
-# location_2 = Location.new("Spokane", [trainer_2, trainer_3])
-# location_3 = Location.new("Portland", [trainer_3])
-
-# client_1 = Client.new("Ada", trainer_1)
-# client_2 = Client.new("Bob", trainer_2)
-# client_3 = Client.new("Claire", trainer_3)
-
-# trainer_1 = Trainer.new("Xavier", location_1, client_1)
-# trainer_2 = Trainer.new("Yvette", location_2, client_2)
-# trainer_3 = Trainer.new("Zack", [location_2, location_3], client_3)
-
 Pry.start
 puts "Session done."

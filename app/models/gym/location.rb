@@ -34,13 +34,3 @@ class Location
     end
 
 end
-
-# pledge_number_of_backers_hash = {}
-# 		Pledge.all.map do |pledge|
-# 			if pledge_number_of_backers_hash[pledge.project.name]
-# 				pledge_number_of_backers_hash[pledge.project.name] += 1
-# 			else
-# 				pledge_number_of_backers_hash[pledge.project.name] = 1
-# 			end
-# 		end
-# 		pledge_number_of_backers_hash.key(pledge_number_of_backers_hash.values.max)
