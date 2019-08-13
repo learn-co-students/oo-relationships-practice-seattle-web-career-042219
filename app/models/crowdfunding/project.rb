@@ -20,8 +20,8 @@ class Project
 			if pledge.amount
 				pledge.project
 			end
-		end
-		projects_with_pledges + Project.all - (projects_with_pledges & Project.all)
+		end.uniq
+		Project.all - projects_with_pledges
 	end
 	
 	def self.above_goal

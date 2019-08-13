@@ -23,7 +23,7 @@ class User
         ar=Pledge.all.map do |pledge|
             pledge.user.name
         end
-        ar.select {|x| ar.count(x) > 1}.uniq.join("")
+        ar.select {|x| ar.count(x) > 1}.uniq.join(", ")
     end
 
     def self.project_creator

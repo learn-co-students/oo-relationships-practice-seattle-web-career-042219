@@ -4,7 +4,7 @@ class Pledge
 
     @@all=[]
 
-    def initialize( user, project, amount)
+    def initialize(user, project, amount)
         @user = user
         @project = project
         @amount = amount
