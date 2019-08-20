@@ -1,12 +1,12 @@
 class Trainer
 
-    attr_accessor :name, :location, :client
+    attr_accessor :name, :client
 
     @@all=[]
 
-    def initialize(name, location, client)
+    def initialize(name, client)
         @name = name
-        @location = location
+        # @location = location
         @client = client
         
         @@all << self
