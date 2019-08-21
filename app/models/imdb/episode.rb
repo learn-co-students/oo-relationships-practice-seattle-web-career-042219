@@ -1,4 +1,4 @@
-class Actor
+class Episode
 
     attr_accessor :name
 
