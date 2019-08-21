@@ -34,9 +34,6 @@ character_3 = Character.new("Xavier", [movie_3], actor_3, show_3)
 character_4 = Character.new("Yvette", [movie_4], actor_4, show_4)
 character_5 = Character.new("Zack", [movie_5], actor_5, show_5)
 
-
-
-
 Pry.start
 puts ""
 puts "Session done."
