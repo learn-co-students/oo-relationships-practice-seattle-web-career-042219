@@ -6,7 +6,7 @@ class Client
 
     def initialize(name, trainer)
         @name = name
-        @trainer = treainer
+        @trainer = trainer
         @@all << self
     end
 
