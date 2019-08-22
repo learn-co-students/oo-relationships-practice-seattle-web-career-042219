@@ -28,11 +28,11 @@ show_3 = Show.new("Captain America: Civil War")
 show_4 = Show.new("D Movie")
 show_5 = Show.new("E Cinema")
 
-character_1 = Character.new("Ulysses", [movie_1], actor_1, show_1)
-character_2 = Character.new("Willie", [movie_2], actor_2, show_2)
-character_3 = Character.new("Xavier", [movie_3], actor_3, show_3)
-character_4 = Character.new("Yvette", [movie_4], actor_4, show_4)
-character_5 = Character.new("Zack", [movie_5], actor_5, show_5)
+character_1 = Character.new("Ulysses", [movie_1], actor_1, [show_1])
+character_2 = Character.new("Willie", [movie_2], actor_2, [show_2])
+character_3 = Character.new("Xavier", [movie_3], actor_3, [show_3])
+character_4 = Character.new("Yvette", [movie_4], actor_4, [show_4])
+character_5 = Character.new("Zack", [movie_5], actor_5, [show_5, show_2])
 
 Pry.start
 puts ""

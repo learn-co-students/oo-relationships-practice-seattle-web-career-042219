@@ -16,4 +16,11 @@ class Character
         @@all
     end
 
+    def self.most_appearances
+        Character.all.max_by do |character|
+            # binding.pry
+            character.movie.size + character.show.size
+        end
+    end
+
 end

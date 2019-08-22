@@ -18,8 +18,8 @@ Show
 [x] #on_the_big_screen
 should return Movies that share the same name as this Show
 Character
-.most_appearances
+[].most_appearances
 should return which character of film/television appears in the most films or tv shows
 Actor
-.most_characters
+[].most_characters
 should return which actor has the most different characters played. (probably meryl streep)
