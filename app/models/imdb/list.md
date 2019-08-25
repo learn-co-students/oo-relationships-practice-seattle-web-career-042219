@@ -18,7 +18,7 @@ Show
 [x] #on_the_big_screen
 should return Movies that share the same name as this Show
 Character
-[].most_appearances
+[x].most_appearances
 should return which character of film/television appears in the most films or tv shows
 Actor
 [].most_characters

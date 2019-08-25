@@ -13,4 +13,11 @@ class Actor
         @@all
     end
 
+    def self.most_characters
+        ActorCharacter.all.each do |actor_character|
+            binding.pry
+            actor_character
+        end
+    end
+
 end
