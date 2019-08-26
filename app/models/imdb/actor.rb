@@ -14,9 +14,9 @@ class Actor
     end
 
     def self.most_characters
-        ActorCharacter.all.each do |actor_character|
+        ActorCharacter.all.max_by do |character_actor|
             binding.pry
-            actor_character
+            character_actor.character
         end
     end
 

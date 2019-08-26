@@ -1,12 +1,12 @@
 class Movie
 
-    attr_accessor :name, :actor
+    attr_accessor :name
 
     @@all=[]
 
-    def initialize(name, actor)
+    def initialize(name)
         @name=name
-        @actor=actor
+        # @actor=actor
         @@all<<self
     end
 
@@ -15,8 +15,9 @@ class Movie
     end
 
     def self.most_actors
-        self.all.max_by do |movie|
-            movie.actor.size
+        Character.all.max_by do |character|
+            binding.pry
+            character.actor.size
         end
     end
 

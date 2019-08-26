@@ -14,12 +14,13 @@ class Show
     end
 
     def on_the_big_screen
-        # Character.all.select do |character|
-        #     character.movie.name == self.name
-        # end.movie
-        Movie.all.select do |movie|
-            movie.name == self.name
+        x=Character.all.select do |character|
+            character.movie.name == self.name
         end
+        x.map do |character|
+            character.movie
+        end
+#         should return Movies that share the same name as this Show
     end
 
 end
