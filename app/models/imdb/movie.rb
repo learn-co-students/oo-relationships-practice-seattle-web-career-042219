@@ -6,7 +6,6 @@ class Movie
 
     def initialize(name)
         @name=name
-        # @actor=actor
         @@all<<self
     end
 
@@ -15,10 +14,13 @@ class Movie
     end
 
     def self.most_actors
-        Character.all.max_by do |character|
-            binding.pry
-            character.actor.size
+       x= MovieCharacter.all.group_by do |movie_character|
+            movie_character.movie
         end
+        x.max_by do |k,v|
+            v.count
+        end[0]
     end
+
 
 end

@@ -1,11 +1,11 @@
-class ActorCharacter
+class CharacterMovie
 
-    attr_accessor :actor, :character
+    attr_accessor :movie, :character
 
     @@all=[]
 
-    def initialize(actor, character)
-        @actor=actor
+    def initialize(movie, character)
+        @movie=movie
         @character=character
         @@all<<self
     end

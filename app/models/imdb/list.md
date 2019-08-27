@@ -12,10 +12,10 @@ an episode has many characters
 These are not simple relationships, so take some time creating them. Write out the relationships using has_many, belongs_to and has_many_through. Write out a schema that shows what these tables might look like in a database. Where would the foreign keys live? Then build out methods reflecting all these relationships. What method can I call on a movie to find all its actors, etc?
 
 Movie
-[].most_actors
-should return the movie which has the most actors in it. this is so the studio knows never to hire that director again because he/she makes expensive movies
+[x].most_actors
+should return the movie which has the most actors in it. 
 Show
-[x] #on_the_big_screen
+[] #on_the_big_screen
 should return Movies that share the same name as this Show
 Character
 [].most_appearances

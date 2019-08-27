@@ -15,12 +15,13 @@ class Show
 
     def on_the_big_screen
         x=Character.all.select do |character|
+            binding.pry
             character.movie.name == self.name
         end
         x.map do |character|
+            binding.pry
             character.movie
         end
-#         should return Movies that share the same name as this Show
     end
 
 end
