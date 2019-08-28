@@ -1,13 +1,13 @@
 class Character
 
-    attr_accessor :name, :actor
+    attr_accessor :character_name, :actor
 
     @@all=[]
 
-    def initialize(name, actor)
-        @name=name
-        @actor=actor
-        @@all<<self
+    def initialize(character_name, actor)
+        @character_name = character_name
+        @actor = actor
+        @@all << self
     end
 
     def self.all
@@ -15,9 +15,14 @@ class Character
     end
 
     def self.most_appearances
-        Character.all.max_by do |character|
-            character.movie.size + character.show.size
+        cm_group = CharacterMovie.all.group_by do |cm|
+            # binding.pry
+            cm.character
         end
+        # all charactermovies grouped by char_name
+        cm_group.max_by do |k, v|
+            v.count
+        end.first
     end
 
 end

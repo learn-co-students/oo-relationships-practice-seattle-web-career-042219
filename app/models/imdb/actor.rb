@@ -1,12 +1,12 @@
 class Actor
 
-    attr_accessor :name
+    attr_accessor :actor_name
 
     @@all=[]
 
-    def initialize(name)
-        @name=name
-        @@all<<self
+    def initialize(actor_name)
+        @actor_name = actor_name
+        @@all << self
     end
 
     def self.all
@@ -14,10 +14,12 @@ class Actor
     end
 
     def self.most_characters
-        ActorCharacter.all.max_by do |character_actor|
-            binding.pry
-            character_actor.character
+        char_group=Character.all.group_by do |character|
+            character.actor
         end
+        char_group.max_by do |k, v|
+            v.count
+        end.first
     end
 
 end

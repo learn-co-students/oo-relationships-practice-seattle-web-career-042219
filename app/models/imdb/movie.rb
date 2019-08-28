@@ -1,12 +1,12 @@
 class Movie
 
-    attr_accessor :name
+    attr_accessor :movie_name
 
     @@all=[]
 
-    def initialize(name)
-        @name=name
-        @@all<<self
+    def initialize(movie_name)
+        @movie_name = movie_name
+        @@all << self
     end
 
     def self.all
@@ -14,13 +14,12 @@ class Movie
     end
 
     def self.most_actors
-       x= MovieCharacter.all.group_by do |movie_character|
-            movie_character.movie
+        mc_group= CharacterMovie.all.group_by do |mc|
+            mc.movie
         end
-        x.max_by do |k,v|
+        mc_group.max_by do |k,v|
             v.count
-        end[0]
+        end.first
     end
-
 
 end

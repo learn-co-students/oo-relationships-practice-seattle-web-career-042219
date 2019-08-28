@@ -14,12 +14,15 @@ These are not simple relationships, so take some time creating them. Write out t
 Movie
 [x].most_actors
 should return the movie which has the most actors in it. 
+
 Show
-[] #on_the_big_screen
+[x] #on_the_big_screen
 should return Movies that share the same name as this Show
+
 Character
-[].most_appearances
+[x].most_appearances
 should return which character of film/television appears in the most films or tv shows
+
 Actor
-[].most_characters
+[x].most_characters
 should return which actor has the most different characters played. (probably meryl streep)

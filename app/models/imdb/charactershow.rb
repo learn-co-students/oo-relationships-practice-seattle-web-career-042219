@@ -1,12 +1,12 @@
 class CharacterShow
 
-    attr_accessor :show, :character
+    attr_accessor :character, :show
 
     @@all=[]
 
-    def initialize(show, character)
-        @show=show
-        @character=character
+    def initialize(character, show)
+        @character = character
+        @show = show
         @@all<<self
     end
 
