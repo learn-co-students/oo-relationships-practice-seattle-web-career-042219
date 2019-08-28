@@ -1,10 +1,12 @@
 1It is 1995 and you are building out IMDB. Take some time to think about the relationships you need to build the site.
 
 your models are movies, shows, characters and actors
+
 movies and shows have many characters
 actors have many characters
-characters only have one actor (for this model)
+characters only have one actor
 characters may have multiple movies or shows
+
 what other relationships exist?
 for an extra twist, afterwards throw episodes into the mix and see how the relationships change
 a show has many episodes

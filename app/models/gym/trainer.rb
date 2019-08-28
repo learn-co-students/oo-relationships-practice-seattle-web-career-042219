@@ -6,7 +6,6 @@ class Trainer
 
     def initialize(name)
         @name = name
-        # @client = client
         @@all << self
     end
 

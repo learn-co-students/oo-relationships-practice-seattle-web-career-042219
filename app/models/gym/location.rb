@@ -34,7 +34,8 @@ class Location
     # end
 
     def self.least_clients
-        LocationTrainer.all.min_by do |lt|
+        LocationTrainer.all.select do |lt|
+            binding.pry
             lt.trainer.client.size
         end.location
     end
