@@ -16,7 +16,6 @@ class Character
 
     def self.most_appearances
         cm_group = CharacterMovie.all.group_by do |cm|
-            # binding.pry
             cm.character
         end
         # all charactermovies grouped by char_name
