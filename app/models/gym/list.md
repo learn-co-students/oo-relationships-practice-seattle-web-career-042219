@@ -27,7 +27,7 @@ location = trainer = client
 
 ### Client
 # assign_trainer
-[x] should take a trainer as argument and assign it to the client
+[x] should take a trainer as argument and assign it to the client.
 ### Location
 [x].least_clients
 should find which location has the least clients training there. 
