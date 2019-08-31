@@ -19,7 +19,6 @@ class Location
         x =LocationTrainer.all.each do |lt|
             Client.all.map do |client|
                 result_ar <<  client.name
-                # binding.pry
             end
         end
         x.min_by do |k, v|
