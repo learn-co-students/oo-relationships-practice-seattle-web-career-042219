@@ -14,9 +14,13 @@ class Trainer
     end
 
     def self.most_clients
-        self.all.max_by do |trainer|
-            trainer.client.size
-        end.name
+        result_hash = {}
+        Client.all.each do |client|
+            result_hash[client.trainer] ? result_hash[client.trainer] +=1 :  result_hash[client.trainer] =1
+        end
+        result_hash.max_by do |k, v|
+            v
+        end
     end
 
 end

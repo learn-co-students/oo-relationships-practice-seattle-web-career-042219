@@ -22,6 +22,8 @@ client_6 = Client.new("Frankie", trainer_3)
 location_trainer1 = LocationTrainer.new(location_1, trainer_1)
 location_trainer2 = LocationTrainer.new(location_2, trainer_2)
 location_trainer3 = LocationTrainer.new(location_3, trainer_3)
+location_trainer4 = LocationTrainer.new(location_2, trainer_3)
+location_trainer5 = LocationTrainer.new(location_3, trainer_2)
 
 Pry.start
 

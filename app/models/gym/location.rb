@@ -14,9 +14,16 @@ class Location
     end
 
     def self.least_clients
-        LocationTrainer.all.select do |lt|
-            binding.pry
-            lt.trainer.client.size
+        result_ar=[]
+        name = ""
+        x =LocationTrainer.all.each do |lt|
+            Client.all.map do |client|
+                result_ar <<  client.name
+                # binding.pry
+            end
+        end
+        x.min_by do |k, v|
+            v
         end.location
     end
 
